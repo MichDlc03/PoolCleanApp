@@ -19,7 +19,7 @@ class DashboardPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Estadísticas mensuales Ph',
+                  'Estadísticas mensuales pH',
                   style: GoogleFonts.poppins(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -27,7 +27,7 @@ class DashboardPage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Porcentaje mensual sobre el Ph generado por tu piscina',
+                  'Porcentaje mensual sobre el pH generado por tu piscina',
                   style: GoogleFonts.poppins(
                     fontSize: 14,
                     fontWeight: FontWeight.w300,
@@ -178,6 +178,7 @@ class DashboardPage extends StatelessWidget {
               temperatura: 15.5,
               humedad: 80.0,
             ),
+            SizedBox(height: 20,),
           ]),
         ),
       ),

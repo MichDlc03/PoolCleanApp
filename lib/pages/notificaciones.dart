@@ -40,6 +40,7 @@ class _NotificacionesPageState extends State<NotificacionesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: GlobalColors.mainColor,
         elevation: 0,

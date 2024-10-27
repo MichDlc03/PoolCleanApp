@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pool_clean_app/pages/splash.dart';
-import 'package:pool_clean_app/widgets/menu.navegacion.dart';
 
 void main() {
   runApp(const PoolClean());

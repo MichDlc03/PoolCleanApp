@@ -29,7 +29,7 @@ class HomePageContent extends StatelessWidget {
                           fontSize: 20,
                           color: GlobalColors.textColor),
                       textAlign: TextAlign.start),
-                  Text('Comencemos revisando los niveles de Ph de tu piscina',
+                  Text('Comencemos revisando los niveles de pH de tu piscina',
                       style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w400,
                           fontSize: 14,
