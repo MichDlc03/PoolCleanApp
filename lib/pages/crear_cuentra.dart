@@ -15,149 +15,81 @@ class CrearCuentaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/pool2.jpg'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 100),
-            child: SafeArea(
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(15.0),
-                decoration: BoxDecoration(
-                  color: GlobalColors.textColor.withOpacity(0.4),
-                  borderRadius: BorderRadius.circular(20),
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: [
+          ClipPath(
+            clipper: CurvedHeaderClipper(),
+            child: Container(
+              height: 250,
+              color: GlobalColors.mainColor,
+              child: Center(
+                child: Text(
+                  'POOL CLEAN',
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
+              ),
+            ),
+          ),
+          SingleChildScrollView(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 20, vertical: 150),
+              child: SafeArea(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      height: 20,
-                    ),
-                    Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        'POOL CLEAN',
-                        style: GoogleFonts.poppins(
-                          textStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 50,
-                    ),
+                    SizedBox(height: 70),
                     Center(
                       child: Text(
                         'Bienvenido registrate aquí',
                         style: GoogleFonts.poppins(
                           textStyle: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            shadows: [
-                              Shadow(
-                                color: Colors.black.withOpacity(0.5),
-                                offset: Offset(2.0, 2.0),
-                                blurRadius: 3.0,
-                              ),
-                            ],
+                            color: Colors.grey[700],
+                            fontSize: 14,
+                            fontWeight: FontWeight.w500,
                           ),
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    TextGeneralForm(
-                      controller: nombreController,
-                      text: 'Nombre',
-                      obscure: false,
-                      textInputType: TextInputType.name,
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    TextGeneralForm(
-                      controller: apellidosController,
-                      text: 'Apellido',
-                      obscure: false,
-                      textInputType: TextInputType.name,
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    TextGeneralForm(
-                      controller: correoController,
-                      text: 'Correo',
-                      obscure: false,
-                      textInputType: TextInputType.emailAddress,
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    TextGeneralForm(
-                      controller: contraController,
-                      text: 'Contraseña',
-                      obscure: true,
-                      textInputType: TextInputType.text,
-                    ),
-                    SizedBox(
-                      height: 15,
-                    ),
-                    ButtonGlobalCuenta(),
-                    SizedBox(
-                      height: 50,
-                    ),
+                    SizedBox(height: 15),
                     Container(
-                      height: 50,
-                      alignment: Alignment.center,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
                         children: [
-                          Text(
-                            '¿Ya tienes cuenta?',
-                            style: GoogleFonts.poppins(
-                              textStyle: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                shadows: [
-                                  Shadow(
-                                    color: Colors.black.withOpacity(0.5),
-                                    offset: Offset(2.0, 2.0),
-                                    blurRadius: 3.0,
-                                  ),
-                                ],
-                              ),
-                            ),
+                          TextGeneralForm(
+                            controller: nombreController,
+                            text: 'Nombre',
+                            obscure: false,
+                            textInputType: TextInputType.name,
                           ),
-                          InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => LoginPage(),
-                                ),
-                              );
-                            },
-                            child: Text(
-                              'Inicia sesión',
-                              style: GoogleFonts.poppins(
-                                textStyle: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ),
+                          SizedBox(height: 15),
+                          TextGeneralForm(
+                            controller: apellidosController,
+                            text: 'Apellido',
+                            obscure: false,
+                            textInputType: TextInputType.name,
                           ),
+                          SizedBox(height: 15),
+                          TextGeneralForm(
+                            controller: correoController,
+                            text: 'Correo',
+                            obscure: false,
+                            textInputType: TextInputType.emailAddress,
+                          ),
+                          SizedBox(height: 15),
+                          TextGeneralForm(
+                            controller: contraController,
+                            text: 'Contraseña',
+                            obscure: true,
+                            textInputType: TextInputType.text,
+                          ),
+                          SizedBox(height: 15),
+                          ButtonGlobalCuenta(),
                         ],
                       ),
                     ),
@@ -166,8 +98,61 @@ class CrearCuentaPage extends StatelessWidget {
               ),
             ),
           ),
+        ],
+      ),
+      bottomNavigationBar: Container(
+        height: 50,
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '¿Ya tienes cuenta?',
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  color: Colors.grey[700],
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LoginPage(),
+                  ),
+                );
+              },
+              child: Text(
+                'Inicia sesión',
+                style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                    color: GlobalColors.mainColor,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
+}
+
+class CurvedHeaderClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    final path = Path();
+    path.lineTo(0, size.height - 50);
+    path.quadraticBezierTo(
+        size.width / 2, size.height, size.width, size.height - 50);
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }

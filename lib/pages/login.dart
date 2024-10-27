@@ -13,13 +13,23 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
-          Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/pool2.jpg'),
-                fit: BoxFit.cover,
+          ClipPath(
+            clipper: CurvedHeaderClipper(),
+            child: Container(
+              height: 250,
+              color: GlobalColors.mainColor,
+              child: Center(
+                child: Text(
+                  'Bienvenido',
+                  style: GoogleFonts.poppins(
+                    color: Colors.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
             ),
           ),
@@ -34,10 +44,6 @@ class LoginPage extends StatelessWidget {
                       child: Container(
                         width: double.infinity,
                         padding: const EdgeInsets.all(15.0),
-                        decoration: BoxDecoration(
-                          color: GlobalColors.textColor.withOpacity(0.4),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
@@ -48,28 +54,21 @@ class LoginPage extends StatelessWidget {
                                 'POOL CLEAN',
                                 style: GoogleFonts.poppins(
                                     textStyle: TextStyle(
-                                  color: Colors.white,
+                                  color: GlobalColors.mainColor,
                                   fontSize: 30,
                                   fontWeight: FontWeight.bold,
                                 )),
                               ),
                             ),
-                            SizedBox(height: 50),
+                            SizedBox(height: 20),
                             Center(
                               child: Text(
                                 'Inicia sesión con tu cuenta',
                                 style: GoogleFonts.poppins(
                                     textStyle: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  shadows: [
-                                    Shadow(
-                                      color: Colors.black.withOpacity(0.5),
-                                      offset: Offset(2.0, 2.0),
-                                      blurRadius: 3.0,
-                                    ),
-                                  ],
+                                  color: Colors.grey[700],
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w500,
                                 )),
                               ),
                             ),
@@ -89,49 +88,6 @@ class LoginPage extends StatelessWidget {
                             ),
                             SizedBox(height: 15),
                             ButtonGlobal(),
-                            SizedBox(height: 50),
-                            Container(
-                              height: 50,
-                              alignment: Alignment.center,
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '¿Aun no tienes cuenta?',
-                                    style: GoogleFonts.poppins(
-                                        textStyle: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500,
-                                      shadows: [
-                                        Shadow(
-                                          color: Colors.black.withOpacity(0.5),
-                                          offset: Offset(2.0, 2.0),
-                                          blurRadius: 3.0,
-                                        ),
-                                      ],
-                                    )),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              CrearCuentaPage(),
-                                        ),
-                                      );
-                                    },
-                                    child: Text(
-                                      'Crear cuenta',
-                                      style: GoogleFonts.poppins(
-                                          textStyle: TextStyle(
-                                              color: Colors.white,
-                                              fontWeight: FontWeight.bold)),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
                           ],
                         ),
                       ),
@@ -143,6 +99,56 @@ class LoginPage extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: Container(
+        height: 50,
+        alignment: Alignment.center,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '¿Aun no tienes cuenta?',
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                color: Colors.grey[700],
+                fontWeight: FontWeight.w500,
+              )),
+            ),
+            InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => CrearCuentaPage(),
+                  ),
+                );
+              },
+              child: Text(
+                'Crear cuenta',
+                style: GoogleFonts.poppins(
+                    textStyle: TextStyle(
+                        color: GlobalColors.mainColor,
+                        fontWeight: FontWeight.w800)),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
+}
+
+class CurvedHeaderClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    final path = Path();
+    path.lineTo(0, size.height - 50);
+    path.quadraticBezierTo(
+        size.width / 2, size.height, size.width, size.height - 50);
+    path.lineTo(size.width, 0);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }

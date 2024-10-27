@@ -14,15 +14,14 @@ class ButtonGlobal extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-              builder: (context) => HomePage()),
+          MaterialPageRoute(builder: (context) => HomePage()),
         );
       },
       child: Container(
         alignment: Alignment.center,
         height: 55,
         decoration: BoxDecoration(
-            color: GlobalColors.textColor.withOpacity(0.5),
+            color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: GlobalColors.colorborde,
@@ -58,7 +57,7 @@ class ButtonGlobalCuenta extends StatelessWidget {
         alignment: Alignment.center,
         height: 55,
         decoration: BoxDecoration(
-            color: GlobalColors.textColor.withOpacity(0.5),
+            color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: GlobalColors.colorborde,
@@ -94,7 +93,7 @@ class ButtonInicio extends StatelessWidget {
         alignment: Alignment.center,
         height: 55,
         decoration: BoxDecoration(
-            color: GlobalColors.textColor.withOpacity(0.4),
+            color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: GlobalColors.colorborde,
@@ -130,7 +129,7 @@ class ButtonCuenta extends StatelessWidget {
         alignment: Alignment.center,
         height: 55,
         decoration: BoxDecoration(
-            color: GlobalColors.textColor.withOpacity(0.4),
+            color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
               color: GlobalColors.colorborde,
