@@ -19,13 +19,13 @@ class WaveAnimation extends StatelessWidget {
             child: Container(
               color: Colors.blue,
               width: MediaQuery.of(context).size.width,
-              height: 200, 
+              height: 200,
             ),
           ),
         ),
       ),
       Positioned(
-        bottom: animation.value - 100, 
+        bottom: animation.value - 100,
         left: 0,
         right: 0,
         child: ClipPath(
@@ -35,7 +35,7 @@ class WaveAnimation extends StatelessWidget {
             child: Container(
               color: const Color.fromARGB(255, 20, 94, 155),
               width: MediaQuery.of(context).size.width,
-              height: 200, 
+              height: 200,
             ),
           ),
         ),

@@ -19,7 +19,7 @@ class ButtonGlobal extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 55,
+        height: 50,
         decoration: BoxDecoration(
             color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),
@@ -55,7 +55,7 @@ class ButtonGlobalCuenta extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 55,
+        height: 50,
         decoration: BoxDecoration(
             color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),
@@ -91,7 +91,7 @@ class ButtonInicio extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 55,
+        height: 50,
         decoration: BoxDecoration(
             color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),
@@ -127,7 +127,7 @@ class ButtonCuenta extends StatelessWidget {
       },
       child: Container(
         alignment: Alignment.center,
-        height: 55,
+        height: 50,
         decoration: BoxDecoration(
             color: GlobalColors.mainColor,
             borderRadius: BorderRadius.circular(20),

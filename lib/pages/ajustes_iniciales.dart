@@ -108,15 +108,16 @@ class _AjustesInicialesPageState extends State<AjustesInicialesPage>
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: GlobalColors.colorSecundario,
+                        backgroundColor: GlobalColors.colorborde,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20),
                         ),
                       ),
-                      child: const Text(
+                      child: Text(
                         '¿No conoces el litraje? Haz clic aquí',
-                        style: TextStyle(fontSize: 16, color: Colors.white),
+                        style: TextStyle(
+                            fontSize: 16, color: GlobalColors.textColor),
                       ),
                     ),
                   ),

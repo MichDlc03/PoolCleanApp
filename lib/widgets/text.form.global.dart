@@ -18,7 +18,6 @@ class TextGeneralForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 55,
       padding: EdgeInsets.only(top: 3, left: 15),
       decoration: BoxDecoration(
           color: Colors.white,

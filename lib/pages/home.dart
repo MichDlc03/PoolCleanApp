@@ -213,7 +213,7 @@ class HomePageContent extends StatelessWidget {
               alignment: Alignment.topLeft,
               margin: EdgeInsets.symmetric(horizontal: 20),
               child: Text(
-                'Informes del monitor ',
+                'Informes sobre el estado de tu piscina ',
                 style: GoogleFonts.poppins(
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -286,7 +286,7 @@ class HomePageContent extends StatelessWidget {
                                     horizontal: 35, vertical: 30),
                                 child: Column(
                                   children: [
-                                    Text('Humedad',
+                                    Text('pH',
                                         style: GoogleFonts.poppins(
                                             fontSize: 16,
                                             fontWeight: FontWeight.w700)),
@@ -302,7 +302,7 @@ class HomePageContent extends StatelessWidget {
                                           color: GlobalColors.mainColor,
                                         ),
                                         Text(
-                                          '70%',
+                                          '7.2',
                                           style: GoogleFonts.poppins(
                                               color: Colors.grey[700],
                                               fontSize: 20,

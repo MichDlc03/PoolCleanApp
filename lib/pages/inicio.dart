@@ -21,15 +21,15 @@ class InicioPage extends StatelessWidget {
               child: Padding(
                 padding: const EdgeInsets.all(24),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 70),
                     Text(
                       'Bienvenido a ',
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                           color: GlobalColors.mainColor,
-                          fontSize: 20,
+                          fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -39,7 +39,7 @@ class InicioPage extends StatelessWidget {
                       style: GoogleFonts.poppins(
                         textStyle: TextStyle(
                           color: GlobalColors.mainColor,
-                          fontSize: 28,
+                          fontSize: 26,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -59,10 +59,20 @@ class InicioPage extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(height: 50),
-                  ButtonInicio(),
+                  Image.asset(
+                    'assets/logo.png',
+                    height: 150,
+                  ),
+                  SizedBox(height: 20),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: ButtonInicio(),
+                  ),
                   SizedBox(height: 15),
-                  ButtonCuenta(),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: ButtonCuenta(),
+                  ),
                 ],
               ),
             ),

@@ -17,15 +17,24 @@ class Splash extends StatelessWidget {
     return Scaffold(
       backgroundColor: GlobalColors.mainColor,
       body: Center(
-        child: Text(
-          'POOL CLEAN',
-          style: GoogleFonts.poppins(
-            textStyle: TextStyle(
-              color: Colors.white,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              'assets/logo.png',
+              height: 200,
             ),
-          ),
+            Text(
+              'POOL CLEAN',
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );

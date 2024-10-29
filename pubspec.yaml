@@ -41,6 +41,8 @@ dependencies:
   curved_navigation_bar: ^1.0.6
   fl_chart: ^0.69.0
   percent_indicator: ^4.2.3
+  flutter_launcher_icons: ^0.7.5
+
 
 
 dev_dependencies:
@@ -73,7 +75,12 @@ flutter:
     - assets/pool4.jpg
     - assets/dispositivo.png
     - assets/dispo.png
-
+    - assets/logo.png
+    - assets/icon.png
+flutter_icons:
+  image_path: "assets/icon.png"
+  android: true
+  ios: true
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

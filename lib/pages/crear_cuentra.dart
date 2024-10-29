@@ -43,7 +43,7 @@ class CrearCuentaPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(height: 70),
+                    SizedBox(height: 80),
                     Center(
                       child: Text(
                         'Bienvenido registrate aquí',
