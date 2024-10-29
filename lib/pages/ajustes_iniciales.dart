@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pool_clean_app/pages/ajustes_formula_litraje.dart';
-import 'package:pool_clean_app/pages/inicio.dart'; // Asegúrate de importar InicioPage aquí
 import 'package:pool_clean_app/utils/global.colors.dart';
-import 'package:pool_clean_app/widgets/litros_modal.dart'; // Modal
+import 'package:pool_clean_app/widgets/litros_modal.dart'; 
 import 'package:pool_clean_app/widgets/wave_animation.dart';
 
 class AjustesInicialesPage extends StatefulWidget {
