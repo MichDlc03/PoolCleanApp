@@ -42,6 +42,7 @@ dependencies:
   fl_chart: ^0.69.0
   percent_indicator: ^4.2.3
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -69,6 +70,7 @@ flutter:
     - assets/pool.jpg
     - assets/pool2.jpg
     - assets/pool3.jpg
+    - assets/pool4.jpg
     - assets/dispositivo.png
     - assets/dispo.png
 
