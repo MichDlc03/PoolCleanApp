@@ -87,7 +87,7 @@ class _AjustesInicialesPageState extends State<AjustesInicialesPage>
                         backgroundColor: GlobalColors.mainColor,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(20),
                         ),
                       ),
                       child: const Text(
@@ -112,7 +112,7 @@ class _AjustesInicialesPageState extends State<AjustesInicialesPage>
                         backgroundColor: GlobalColors.colorSecundario,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(20),
                         ),
                       ),
                       child: const Text(
