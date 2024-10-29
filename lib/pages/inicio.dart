@@ -64,15 +64,9 @@ class InicioPage extends StatelessWidget {
                     height: 150,
                   ),
                   SizedBox(height: 20),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50),
-                    child: ButtonInicio(),
-                  ),
+                  ButtonInicio(),
                   SizedBox(height: 15),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 50),
-                    child: ButtonCuenta(),
-                  ),
+                  ButtonCuenta(),
                 ],
               ),
             ),
